@@ -19,7 +19,7 @@ $(function () {
         }
     })
     // 注册
-    $('#form_reg').on('submit', function (e) {
+    $('.layui-form').on('submit', function(e) {
         e.preventDefault();
         var data = {
             username: $('#form_reg [name = username]').val(),
