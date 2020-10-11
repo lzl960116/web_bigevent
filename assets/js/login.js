@@ -19,7 +19,7 @@ $(function () {
         }
     })
     // 注册
-    $('.layui-form').on('submit', function(e) {
+    $('#form_reg').on('submit', function(e) {
         e.preventDefault();
         var data = {
             username: $('#form_reg [name = username]').val(),
@@ -27,7 +27,7 @@ $(function () {
         }
         $.post('/api/reguser', data, function (res) {
             if (res.status !== 0) {
-                return layer.msg(res.message)
+                return layer.msg('注册失败')
             }
             layer.msg('注册成功，请登录!')
             $('#link_login').click()

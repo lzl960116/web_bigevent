@@ -36,9 +36,8 @@ $('#file').on('change', function (e) {
 })
 
    // 初始化用户信息
-   initUserInfo();
-
-   function initUserInfo() {
+   getUserInfo();
+   function getUserInfo() {
        $.ajax({
            url: '/my/userinfo',
            success: function (res) {
